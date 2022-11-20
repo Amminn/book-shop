@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+}
+
 *,
 *::after,
 *::before {
@@ -5,3 +11,589 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-family: 'Patua One', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; /* 1rem == 10px  */
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 110rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+header nav {
+  min-height: 7.4rem;
+  background: rgba(16, 16, 25, 0.74);
+  position: relative;
+  z-index: 10;
+}
+
+header nav ul {
+  list-style-type: none;
+  width: 100%;
+  height: 7.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+}
+
+header nav ul a {
+  color: white;
+  font-size: 1.6rem;
+}
+
+header nav ul a.logo {
+  font-family: 'Patua One';
+  display: flex;
+  align-items: center;
+}
+
+header nav ul i {
+  font-size: 2rem;
+}
+
+header nav ul .cart {
+  position: relative;
+}
+
+header nav ul .cart i {
+  position: relative;
+}
+
+header nav ul .cart.active .ri-shopping-cart-line::after {
+  content: '';
+  position: absolute;
+  right: 0.2rem;
+  top: -0.2rem;
+  background: red;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+header nav ul .cart .the-cart {
+  display: none;
+}
+
+header nav ul .cart.active .the-cart {
+  display: block;
+}
+
+header nav ul .cart .the-cart {
+  /* display: none; */
+  padding: 2rem;
+  width: 319px;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  background-color: white;
+  border-radius: 13px;
+  color: black;
+}
+
+header .the-cart__title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0.5rem;
+}
+
+header .the-cart__text {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 1.5rem;
+}
+
+header .the-cart__item {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  width: 100%;
+  height: 62px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+header .the-cart__item img {
+  width: 39px;
+  height: 47px;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+header .the-cart__item .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .the-cart__item .text .book-title {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+header .the-cart__item .text .book-author-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .book-author-price p {
+  color: #696969;
+  font-size: 10px;
+  margin-top: 0.2rem;
+}
+
+header .book-author-price h3 {
+  color: #FB7C49;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+header .the-cart__item .count {
+  color: #393939;
+  font-weight: 600;
+  font-size: 22px;  
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+header .the-cart__item .up-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+header .the-cart__item .up-down button {
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+header .the-cart__item .delete {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+header .book .how-many {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+header .book .confirmation {
+  width: 100%;
+  height: 31px;
+  background-color: #FB7C49;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+main .hero {
+  margin-top: -7.4rem;
+  width: 100%;
+  height: 474px;
+  background: url('../images/hero-background.png') no-repeat center/cover;
+}
+
+main .hero h1 {
+  width: 641px;
+  margin-inline: auto;
+  font-size: 3.4rem;
+  text-align: center;
+  color: white;
+  padding-top: calc(125px + 74px);
+  text-transform: capitalize;
+  position: relative;
+}
+
+main .hero h1::after {
+  content: '';
+  position: absolute;
+  width: 203px;
+  height: 22px;
+  right: 8%;
+  bottom: -3.5%;
+  background: url('../images/two-blue-lines.png') no-repeat center;
+}
+
+main .books {
+  width: 100%;
+  background-color: #DFDFDF;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+main .books.form-active .form {
+  display: block;
+}
+
+/* popup start */
+
+main .books.blur::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.44);
+  backdrop-filter: blur(5px);
+}
+
+main .books.pop-active .pop-out {
+  display: block;
+  width: 783px;
+  min-height: 419px;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 27px;
+  z-index: 20;
+  padding: 3rem;
+}
+
+.pop-out {
+  display: none;
+}
+
+main .pop-out-inner {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+main .pop-out-inner .book-img img {
+  border: 1px solid #FB7C49;
+  border-radius: 13px;
+  height: 357px;
+}
+
+main .pop-out-inner .text {
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main .pop-out__close {
+  position: absolute;
+  background: #696969;
+  color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  top: -10%;
+  right: -10%;
+  border: none;
+  cursor: pointer;
+}
+
+main .pop-out__close i {
+  font-size: 2.5rem;
+}
+
+main .pop-out-inner .top-side {
+  margin-bottom: auto;
+}
+
+main .books__author {
+  color: #696969;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0.5rem;
+}
+
+main .books__book-title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #3F3F3F;
+  margin-bottom: 0.5rem;
+}
+
+main .books__review-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+main .books__review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .books__review-price img {
+  width: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+main .books__review-price .number {
+  color: #FB7C49;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+main .pop-out-inner .description {
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000A1;
+  text-align: justify;
+}
+
+main .pop-out__buttons {
+  display: flex;
+  margin-top: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  gap: 2rem;
+}
+
+main .pop-out__buttons button {
+  width: 177px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 17px;
+}
+
+main .pop-out__buttons .fill-button {
+  color: white;
+  background-color: #FB7C49;
+}
+
+main .pop-out__buttons .border-button {
+  background-color: transparent;
+  border: 1px solid #FB7C49;
+  color: #FB7C49;
+}
+
+/* popup ends */
+
+/* form start */
+
+main .books .form {
+  display: none;
+}
+
+main .books .form {
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  left: 50%;
+  background-color: white;
+  height: 1006px;
+  width: 738px;
+  border-radius: 27px;
+  padding: 3.5rem 5rem 5rem;
+  z-index: 50;
+}
+
+main .books .form__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 3.7rem;
+}
+
+main .books .section {
+  margin-bottom: 3rem;
+}
+
+
+main .books .section label {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* form ends */
+
+/* make all the background blur  */
+
+main .section-books__title {
+  padding-top: 6.5rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+
+main .books-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(337px, 1fr));
+  justify-items: center;
+  column-gap: 1.5rem;
+  row-gap: 2.5rem;
+}
+
+main .book {
+  width: 337px;
+  background-color: #EEEEEE;
+  border-radius: 50px;
+  min-height: 694px;
+  padding-inline: 2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 80px 50px 100px rgba(0, 0, 0, 0.25);
+}
+
+main .book::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: red;
+  bottom: 46%;
+  right: 0;
+  background: url('../images/half-circle.png') no-repeat center;
+  z-index: -1;
+}
+
+main .book::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  bottom: 0px;
+  right: 0;
+  z-index: -1;
+}
+
+main .book .book-image {
+  display: block;
+  margin: 66px auto 55px;
+  max-width: 197px;
+  height: 270px;
+  border-radius: 13px;
+  border: 1px solid #FB7C49;
+}
+
+main .book .title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+main .book .book__title {
+  font-size: 22px;
+  max-width: 250px;
+}
+
+main .book .book__price {
+  color: #FB7C49;
+}
+
+main .book .review {
+  display: flex;
+  align-items: center;
+  color: #696969;
+  font-size: 1.2rem;
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+main .book .review img {
+  padding-right: 0.5rem;
+}
+
+main .book .description {
+  font-size: 1.5rem;
+  color: #696969;
+  margin-bottom: 1.9rem;
+}
+
+main .book .description .readmore {
+  color: #FB7C49;
+  font-weight: 700;
+}
+
+main .book .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+main .book .buttons__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #696969;
+  padding: 0rem 1rem;
+  border: 1px solid #696969;
+  background: transparent;
+  border-radius: 9px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* general style */
+main .buttons__buy { 
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  width: 189px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #FB7C49;
+  border-radius: 17px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+main .book .buttons__buy i {
+  padding-left: 0.5rem;
+}
+

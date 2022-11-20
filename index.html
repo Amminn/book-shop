@@ -4,10 +4,327 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="./assests/styles/style.css">
   <title>Book shop</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="container">
+        <ul>
+          <li>
+            <a href="https://www.figma.com/file/3KCDLkPjdSkaHd8MUL49Ie/book-shop?node-id=1%3A2&t=fC77MXPkA7oj0CFt-1" target="_blank">Designed By</a>
+          </li>
+          <li>
+            <a class="logo" href="">BookShop<i class="ri-shopping-bag-3-line"></i></a>
+          </li>
+          <li class="cart">
+            <p class="" ><i class="ri-shopping-cart-line"></i></p>
+            <div class="the-cart">
+              <div class="book">
+                <h2 class="the-cart__title">shopping cart</h2>
+                <p class="the-cart__text">You have 3 books in the cart</p>
+                <div class="the-cart__item">
+                  <img src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="">
+                  <div class="text">
+                    <h3 class="book-title">
+                      Effective JavaScript
+                    </h3>
+                    <div class="book-author-price">
+                      <p>David Herman</p>
+                      <h3>22$</h3>
+                    </div>
+                  </div>
+                  <h2 class="count">1</h2>
+                  <div class="up-down">
+                    <button class="up"><i class="ri-arrow-up-s-fill"></i></button>
+                    <button class="down"><i class="ri-arrow-down-s-fill"></i></button>
+                  </div>
+                  <button class="delete"><i class="ri-delete-bin-line"></i></button>
+                </div>
+                <p class="how-many">Subtotal (3 item): $81.00</p>
+                <button class="confirmation">Confirm order</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>Dream library with millions of books <br>
+        Buy now receive tomorrow
+      </h1>
+    </div>
+    <!-- add to show the pop-up add "pop-active" class -->
+    <!-- for the blur add blur class  -->
+    <section class="books form-active blur ">
+      <!-- popup -->
+      <div class="pop-out">
+        <div class="pop-out-inner">
+          <div class="book-img">
+            <img src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="">
+          </div>
+          <div class="text">
+            <button class="pop-out__close"><i class="ri-close-line"></i></button>
+            <div class="top-side">
+              <p class="books__author">David Herman</p>
+              <h2 class="books__book-title">Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript"</h2>
+              <div class="books__review-price">
+                <div class="books__review">
+                  <img src="./assests/images/bxs-star.png" alt="review star">
+                  <p class="review"> 4.6 / 543 review</p>
+                </div>
+                <h3 class="number">32$</h3>
+              </div>
+              <p class="description">
+                Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency"
+              </p>
+            </div>
+            <div class="pop-out__buttons">
+              <button class="fill-button">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+              <button class="border-button">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- form -->
+      <form class="form">
+        <h2 class="form__title">Shipping details</h2>
+        <div class="name-section sectoin">
+          <h3 class="small__title">Receiver Name</h3>
+          <div class="form__two-col">
+            <div class="form__two-col__first">
+              <label for="first-name">First Name:</label>
+              <input type="text" name="first-name" placeholder="First Name" required>
+            </div>
+            <div class="form__two-col__second">
+              <label for="last-name">last Name:</label>
+              <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+          </div>
+          <label for="date">Delivery Date: <span class="less-important">(not earlier than next day)</span></label>
+          <input type="date" name="date" required>
+        </div>
+
+        <div class="receive-section section">
+          <h3 class="small__title">Receiver Name</h3>
+          <label for="street">Street:</label>
+          <input type="number" name="street" placeholder="Street" required>
+          <div class="form__two-col">
+            <div class="form__two-col__first">
+              <label for="house">House:</label>
+              <input type="text" name="house" placeholder="House" required >
+            </div>
+            <div class="form__two-col__second">
+              <label for="flat">Flat:</label>
+              <input type="text" name="flat" placeholder="flat" required >
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-section section">
+          <h3 class="small__title">Payment Information</h3>
+          <input type="radio" id="card" name="payment" value="card">
+          <label for="card">Card</label>
+          <input type="radio" id="cash" name="payment" value="cash">
+          <label for="cash">Cash</label>
+        </div>
+
+        <div class="gift-section section">
+          <h3 class="small__title">Choose 3 gifts (optional)</h3>
+          <input type="checkbox" id="packgift" name="packgift" value="Pack as a gift">
+          <label for="packgift">Pack as a gift</label><br>
+          <input type="checkbox" id="addpostcart" name="addpostcart" value="addpostcart">
+          <label for="addpostcart"> Add postcart</label><br>
+          <input type="checkbox" id="provide2" name="provide2" value="provide2">
+          <label for="provide2">Provide 2% to the next time</label><br>
+          <input type="checkbox" id="pencil" name="pencil" value="pencil">
+          <label for="pencil">Branded pin of pencil</label><br>
+        </div>
+        <button class="submit">PURCHASE</button>
+      </form>
+
+      <!-- form ends -->
+
+      <div class="container">
+        <h2 class="section-books__title">Tech Section</h2>
+        <div class="books-grid">
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+          <div class="book">
+            <img class="book-image" src="./assests/books-images/Effective JavaScript_ 68 Specific Ways to Harness the Power of JavaScript.png" alt="Effective JavaScript: 68 Specific Ways book">
+            <div class="title-price">
+              <h3 class="book__title">Effective JavaScript: 68 Specific Ways...</h3>
+              <h3 class="book__price">22$</h3>
+            </div>
+            <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+            <p class="description">
+              Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right...
+              <a class="readmore" href="">ReadMore</a>
+            </p>
+            <div class="buttons">
+              <button class="buttons__cart"><i class="ri-shopping-cart-line"></i></button>
+              <button class="buttons__buy">Buy Now <i class="ri-arrow-right-s-line"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
