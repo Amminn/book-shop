@@ -60,7 +60,8 @@
     </div>
     <!-- add to show the pop-up add "pop-active" class -->
     <!-- for the blur add blur class  -->
-    <section class="books form-active blur ">
+    <!-- for the form form-active  -->
+    <section class="books ">
       <!-- popup -->
       <div class="pop-out">
         <div class="pop-out-inner">
@@ -94,47 +95,53 @@
       <!-- form -->
       <form class="form">
         <h2 class="form__title">Shipping details</h2>
-        <div class="name-section sectoin">
+        <div class="name-section section large-entry top">
           <h3 class="small__title">Receiver Name</h3>
           <div class="form__two-col">
-            <div class="form__two-col__first">
+            <div class="form__two-col__first two-col">
               <label for="first-name">First Name:</label>
-              <input type="text" name="first-name" placeholder="First Name" required>
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
             </div>
-            <div class="form__two-col__second">
+            <div class="form__two-col__second two-col">
               <label for="last-name">last Name:</label>
-              <input type="text" name="last-name" placeholder="Last Name" required>
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
             </div>
           </div>
           <label for="date">Delivery Date: <span class="less-important">(not earlier than next day)</span></label>
-          <input type="date" name="date" required>
+          <input class="full-width" id="date" type="date" name="date" required>
         </div>
 
-        <div class="receive-section section">
+        <div class="receive-section section large-entry">
           <h3 class="small__title">Receiver Name</h3>
           <label for="street">Street:</label>
-          <input type="number" name="street" placeholder="Street" required>
+          <input class="full-width bottom" id="street" type="number" name="street" placeholder="Street" required>
           <div class="form__two-col">
-            <div class="form__two-col__first">
+            <div class="form__two-col__first two-col">
               <label for="house">House:</label>
-              <input type="text" name="house" placeholder="House" required >
+              <input type="text" id="house" name="house" placeholder="House" required >
             </div>
-            <div class="form__two-col__second">
+            <div class="form__two-col__second two-col">
               <label for="flat">Flat:</label>
-              <input type="text" name="flat" placeholder="flat" required >
+              <input type="text" id="flat" name="flat" placeholder="Flat" required >
             </div>
           </div>
         </div>
 
-        <div class="payment-section section">
+        <div class="payment-section section radio-checkbox">
           <h3 class="small__title">Payment Information</h3>
-          <input type="radio" id="card" name="payment" value="card">
-          <label for="card">Card</label>
-          <input type="radio" id="cash" name="payment" value="cash">
-          <label for="cash">Cash</label>
+          <div class="payment-section__two-col">
+            <div class="payment-section__two-col-first">
+              <input type="radio" id="card" name="payment" value="card">
+              <label for="card">Card</label>
+            </div>
+            <div class="payment-section__two-col-second">
+              <input type="radio" id="cash" name="payment" value="cash">
+              <label for="cash">Cash</label>
+            </div>
+          </div>
         </div>
 
-        <div class="gift-section section">
+        <div class="gift-section section radio-checkbox">
           <h3 class="small__title">Choose 3 gifts (optional)</h3>
           <input type="checkbox" id="packgift" name="packgift" value="Pack as a gift">
           <label for="packgift">Pack as a gift</label><br>

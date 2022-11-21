@@ -419,9 +419,10 @@ main .books .form {
 
 main .books .form {
   position: absolute;
-  top: 20%;
-  right: 50%;
-  left: 50%;
+  top: -11%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
   background-color: white;
   height: 1006px;
   width: 738px;
@@ -441,13 +442,89 @@ main .books .section {
   margin-bottom: 3rem;
 }
 
+main .books .small__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 2.5rem;
+}
 
 main .books .section label {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
+main .books .section label span {
+  color: #696969;
+}
 
+main .books .large-entry label {
+  display: block;
+}
+
+main .books .large-entry input {
+  padding: 1rem;
+  background-color: #F9F9F9;
+  border: 1px solid #696969;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: black;
+}
+
+main .books .large-entry input::placeholder {
+  color: #5A5A5A;
+  font-size: 1.4rem;
+}
+
+main .books .form__two-col {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.8rem;
+}
+
+main .books .top .form__two-col {
+  margin-bottom: 2rem;
+}
+
+main .books .bottom {
+  margin-bottom: 2rem;
+}
+
+main .books .form__two-col .two-col {
+  width: 90%;
+}
+
+main .books .form__two-col input {
+  width: 100%;
+}
+
+main .books .full-width {
+  width: 100%;
+}
+
+main .books .radio-checkbox input {
+  margin-right: 1rem;
+}
+
+main .books .payment-section__two-col {
+  display: flex;
+  gap: 2rem;
+}
+
+main .books .submit {
+  display: block;
+  width: 401px;
+  height: 35px;
+  background-color: #FB7C49;
+  color: white;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 3.8rem auto 0;
+  border: none;
+  border-radius: 27px;
+  cursor: pointer;
+}
 
 /* form ends */
 
