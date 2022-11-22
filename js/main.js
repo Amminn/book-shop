@@ -93,7 +93,7 @@ function books() {
   booksGrid.className = "books-grid"
 
   // img, title, price, desc
-  fetch('/js/books.json') 
+  fetch('./js/books.json') 
   .then(response => response.json())
   .then(data => {
     data.forEach(element => {booksGrid.append(book(element.imageLink, element.title, element.price, element.description))})
