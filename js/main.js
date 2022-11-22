@@ -60,12 +60,12 @@ function book(img, title, price, desc) {
   bookCart.className = "book"
 
   bookCart.innerHTML = `
-    <img class="book-image" src="/assests/books-images/${img}.png" alt="Effective JavaScript: 68 Specific Ways book">
+    <img class="book-image" src="./assests/books-images/${img}.png" alt="Effective JavaScript: 68 Specific Ways book">
     <div class="title-price">
         <h3 class="book__title">${shortText(title, 30)}</h3>
         <h3 class="book__price">${price}$</h3>
       </div>
-      <p class="review"><img src="/assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
+      <p class="review"><img src="./assests/images/bxs-star.png" alt="star">4.6 / 534 review</p>
       <p class="description">
         ${shortText(desc, 158)}
         <a class="readmore" href="">ReadMore</a>
