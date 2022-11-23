@@ -1,14 +1,5 @@
 let cartBooks = []
 
-window.onload = () => {
-  const fragment = new DocumentFragment();
-  fragment.append(
-    renderHeader(),
-    renderMain(),
-  )
-  document.body.append(fragment);
-}
-
 function renderHeader() {
   const header = document.createElement("header")
   header.innerHTML = `
@@ -150,3 +141,11 @@ function books() {
   return booksSection
 }
 
+window.onload = () => {
+  const fragment = new DocumentFragment();
+  fragment.append(
+    renderHeader(),
+    renderMain(),
+  )
+  document.body.append(fragment);
+}
