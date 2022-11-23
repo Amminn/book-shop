@@ -43,12 +43,6 @@ function shortText(text, maxLength) {
   return text.length >= maxLength ? text.slice(0, maxLength) + "..." : text
 }
 
-// pop out function
-
-function openPopUp(id) {
-  return console.log(123)
-}
-
 function books() {
   const booksSection = document.createElement("section")
   booksSection.className = "books"
@@ -69,7 +63,7 @@ function books() {
   const booksGrid = document.createElement("div")
   booksGrid.className = "books-grid"
 
-  fetch('./js/books.json')
+  fetch("./js/books.json")
     .then(response => response.json())
     .then(data => {
       data.forEach((element, index) => {
