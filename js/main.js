@@ -54,7 +54,7 @@ function books() {
   container.className = "container"
 
   const booksSectionTitle = document.createElement("h2")
-  booksSectionTitle.textContent = "Please don't review the website yet am Still working on it"
+  booksSectionTitle.textContent = "Front-End Section"
   booksSectionTitle.className = "section-books__title"
 
   const popUp = document.createElement("div")
