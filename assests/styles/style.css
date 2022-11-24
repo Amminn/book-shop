@@ -71,7 +71,7 @@ header nav ul .cart i {
   position: relative;
 }
 
-header nav ul .cart.active .ri-shopping-cart-line::after {
+header nav ul .cart.full .ri-shopping-cart-line::after {
   content: '';
   position: absolute;
   right: 0.2rem;
